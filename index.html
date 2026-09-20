@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" readonly placeholder="0">
+
+     
+        <div class="buttons">
+            <!-- Row1 -->
+            <button type="button" class="btn btn-action" onclick="clearDisplay()">AC</button>
+            <button type="button" class="btn btn-action" onclick="deleteLast()">DEL</button>
+            <button type="button" class="btn btn-action" onclick="appendValue('%')">%</button>
+            <button type="button" class="btn btn-operator" onclick="appendValue('/')">÷</button>
+
+            <!-- Row2 -->
+            <button type="button" class="btn btn-number" onclick="appendValue('7')">7</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('8')">8</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('9')">9</button>
+            <button type="button" class="btn btn-operator" onclick="appendValue('*')">x</button>
+
+            <!-- Row3 -->
+            <button type="button" class="btn btn-number" onclick="appendValue('4')">4</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('5')">5</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('6')">6</button>
+            <button type="button" class="btn btn-operator" onclick="appendValue('-')">-</button>
+
+            <!-- Row4 -->
+            <button type="button" class="btn btn-number" onclick="appendValue('1')">1</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('2')">2</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('3')">3</button>
+            <button type="button" class="btn btn-operator" onclick="appendValue('+')">+</button>
+
+            <!-- Row5 -->
+            <button type="button" class="btn btn-number" onclick="appendValue('00')">00</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('0')">0</button>
+            <button type="button" class="btn btn-number" onclick="appendValue('.')">.</button>
+            <button type="button" class="btn btn-equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
